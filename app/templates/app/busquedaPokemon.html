@@ -1,0 +1,33 @@
+{% extends 'app/base.html' %}
+{% load static %} 
+{% block content %}
+<br><br><br><br>
+<div class="fondo2">
+  <br>
+  <div class="container2">
+    <div class="row">
+      <form method="POST" id="formulario">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="txtIndicador"></label>
+          <input type="text" class="form-control" id="txtIndicador" required="" placeholder="Ingrese nombre del pokemon">
+        </div>
+        <br>
+        <button type="button" class="btn btn-primary" id="btnInformacion">Cargar Informacion</button>
+      </form>
+    </div>
+    <br>
+    <div class="row">
+      <div id="info" class="text-center card1"></div>
+    </div>
+    <div id="acordeon">    <div class="spinner-border" role="status" id="spinner">
+      <span class="sr-only"></span>
+    </div></div>
+    <br>
+
+  </div>
+  <br>
+</div>
+  
+  
+{% endblock %}
